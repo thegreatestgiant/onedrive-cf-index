@@ -1,5 +1,5 @@
 import { marked } from 'marked'
-import { cleanUrl } from 'marked/src/helpers'
+import { cleanUrl } from './helper.js'
 
 // Rewrite renderer, see original at: https://github.com/markedjs/marked/blob/master/src/Renderer.js
 const renderer = new marked.Renderer()
