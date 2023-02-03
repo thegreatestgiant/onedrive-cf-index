@@ -17,9 +17,9 @@ const config = {
     sitePath: null
   },
 
-  refresh_token: 'M.R3_BAY.-CSmjHX2lzBWI!B1BmeRpl1hOtxWi7VQqXojQ8yB1wDHwoUMIqvWbvaiVsvqpkf5z9UtUxJm!BUVKeiCw7kU7voQ4Nrk4BGd0chwvSAIf!9lL8mGSxV6FS6erlFd7ZQ0iD2bzQo3X6KOuMoM9Qtg4gmhoWA2KUb7kjUXJPhXVMfRUojFY*7Yzlrs8T1ZgIrjEzrc*R!YPync8VOpPWPB4VbfgJ8OgAmvbUTnhHCGA!44ZR086uisOl9wBHGoEMmDflxAmv!3FgMwAI4iAomTaQQOBGxMuZqIztQfJXKT1ws3mYFzwTwVk338AhS1F9f3rpzpPKcleiTXmL3uUrwY9ZJpDpfUjECfotNSJrwW8cCEXAYArmAvEZ7jGWiwsn01*pg$$',
-  client_id: 'cc66a51c-7e87-45bb-a3f1-284ab5658ef8',
-  client_secret: 'cip8Q~ngQKz1UmUoeYTnhLwpKsGMqVsEtKQWJcEL',
+  refresh_token: 'M.R3_BAY.-CX8pRPG2KwW12P3aZIb5qfgcyLdC8OfdqDL0JQpFgYERMcfC3pkIrWX*Bie2rHw6VkkYsK0P9ZTuSXWps9ivxsjM4uwjdVZES3dY!BjQkhYwhJ3zasJTdnoYjvM56!53rCkF1JvVGwnsU5SHavXrlawqN20FIyoWWlfPcPqb3xfdpnaC1vlq6hbiv4K64cZ!UG0g!O0vV5sk!Ku1LP7BFuKbM6pHSdFoQyp7*7mJ0cU9pVWjB7Od2wscWkxDdanETIuGv1AG8ATdu1Ec8YjnABrDR5WQHR3u6LwldmZEgv9J0DaIfql2XiI1VHMvWM4oBWXLrAIXPohdELAYsnV0BCKgpgGFTHnWTEk4xHt4NTIlQkK!cT!PMzSHD4q4zwpK5w$$',
+  client_id: '7bb9ca9e-9708-49ad-983c-68cbd12ff8ec',
+  client_secret: 'Ryw8Q~isNDGwBfPcUhgzIum0z~2.yOJY2DrqMcEc',
 
   /**
    * Exactly the same `redirect_uri` in your Azure Application
