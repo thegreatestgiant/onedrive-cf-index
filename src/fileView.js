@@ -1,4 +1,4 @@
-import marked from 'marked'
+import { marked } from 'marked'
 
 import { renderHTML } from './render/htmlWrapper'
 import { renderPath } from './render/pathUtil'
