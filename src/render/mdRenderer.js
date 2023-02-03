@@ -1,4 +1,4 @@
-import marked from 'marked'
+import { marked } from 'marked'
 import { cleanUrl } from 'marked/src/helpers'
 
 // Rewrite renderer, see original at: https://github.com/markedjs/marked/blob/master/src/Renderer.js
