@@ -199,12 +199,17 @@ wrangler secret put AUTH_PASSWORD
 # ... enter the authentication password we set here
 ```
 
+### Add Required Packages
+```
+npm install font-awesome-filetypes marked
+```
+
 ### Compile and deploy
 
 We can preview the deployment using `wrangler`:
 
 ```sh
-wrangler preview
+wrangler dev
 ```
 
 If all goes well, we can publish the Cloudflare Worker with the following command:
