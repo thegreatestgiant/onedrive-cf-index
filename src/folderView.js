@@ -111,9 +111,7 @@ export async function renderFolderView(items, path, request) {
           })
           .join('')
       )
-    ) +
-    (readmeExists && !isIndex ? await renderMarkdown(readmeFetchUrl, 'fade-in-fwd', '') : '') +
-    (isIndex ? intro : '')
+    ) 
   )
   return renderHTML(body, ...[request.pLink, request.pIdx])
 }
