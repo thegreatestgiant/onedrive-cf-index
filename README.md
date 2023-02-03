@@ -224,7 +224,7 @@ If you want to deploy Cloudflare Worker under your own domain name, please refer
 
 ## Customization of style and content
 
-- We **should** change the default "landing page", directly modify the HTML of `intro` in [src/folderView.js](src/folderView.js#L51-L55);
+- We **should** change the default "landing page", directly modify the HTML of `intro` in [src/folderView.js](src/folderView.js#L51-L56);
 - We also **should** change the header of the page, just modify [src/render/htmlWrapper.js](src/render/htmlWrapper.js#L24) directly;
 - The style CSS file is located at [themes/spencer.css](themes/spencer.css), you can customize this file according to your own needs, and you also need to update [src/render/htmlWrapper.js](src/render/htmlWrapper.js #L3) commit HASH in the file;
 - We can also customize Markdown rendering CSS style, PrismJS code highlighting style, etc.
