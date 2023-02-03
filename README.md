@@ -7,7 +7,7 @@
 ---
 
 [![Hosted on Cloudflare Workers](https://img.shields.io/badge/Hosted%20on-CF%20Workers-f38020?logo=cloudflare&logoColor=f38020&labelColor=282d33)](https://storage.spencerwoo.com/)
-[![Deploy](https://github.com/spencerwooo/onedrive-cf-index/workflows/Deploy/badge.svg)(https://github.com/spencerwooo/onedrive-cf-index/actions?query=workflow%3ADeploy)]
+[![Deploy](https://github.com/spencerwooo/onedrive-cf-index/workflows/Deploy/badge.svg)](https://github.com/spencerwooo/onedrive-cf-index/actions?query=workflow%3ADeploy)
 
 <h5>This project uses CloudFlare Workers to help you deploy and share your OneDrive files for free. This project is largely derived from: <a href="https://github.com/heymind/OneDrive-Index-Cloudflare-Worker">onedrive-index-cloudflare-worker</a>, tribute. </h5>
 
