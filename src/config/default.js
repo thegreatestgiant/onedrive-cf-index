@@ -17,9 +17,9 @@ const config = {
     sitePath: null
   },
 
-  refresh_token: 'M.R3_BAY.-CX8pRPG2KwW12P3aZIb5qfgcyLdC8OfdqDL0JQpFgYERMcfC3pkIrWX*Bie2rHw6VkkYsK0P9ZTuSXWps9ivxsjM4uwjdVZES3dY!BjQkhYwhJ3zasJTdnoYjvM56!53rCkF1JvVGwnsU5SHavXrlawqN20FIyoWWlfPcPqb3xfdpnaC1vlq6hbiv4K64cZ!UG0g!O0vV5sk!Ku1LP7BFuKbM6pHSdFoQyp7*7mJ0cU9pVWjB7Od2wscWkxDdanETIuGv1AG8ATdu1Ec8YjnABrDR5WQHR3u6LwldmZEgv9J0DaIfql2XiI1VHMvWM4oBWXLrAIXPohdELAYsnV0BCKgpgGFTHnWTEk4xHt4NTIlQkK!cT!PMzSHD4q4zwpK5w$$',
-  client_id: '7bb9ca9e-9708-49ad-983c-68cbd12ff8ec',
-  client_secret: 'Ryw8Q~isNDGwBfPcUhgzIum0z~2.yOJY2DrqMcEc',
+  refresh_token: REFRESH_TOKEN,
+  client_id: '0399fe5d-99a2-4f4a-ad41-b7a19555f6c2',
+  client_secret: CLIENT_SECRET,
 
   /**
    * Exactly the same `redirect_uri` in your Azure Application
