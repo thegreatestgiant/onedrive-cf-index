@@ -8,46 +8,6 @@
 
 <h5>This project uses CloudFlare Workers to help you deploy and share your OneDrive files for free. This project is largely derived from: <a href="https://github.com/heymind/OneDrive-Index-Cloudflare-Worker">onedrive-index-cloudflare-worker</a>, tribute. </h5>
 
-## Function
-
-### 🚀 Feature List
-
-- New "breadcrumbs" navigation bar;
-- token credentials are automatically refreshed by Cloudflare Workers and kept in the (free) global KV store;
-- Use [Turbolinks®](https://github.com/turbolinks/turbolinks) to implement lazy loading of routes;
-- Support for versions of OneDrive operated by 21Vianet;
-- Support for SharePoint deployment;
-
-### 🗃️ directory index display
-
-- A new design style that supports customization: [spencer.css](themes/spencer.css);
-- Support for using Emoji as folder icon (if the first character of the folder name is Emoji, this function will be automatically enabled);
-- Render `README.md` If the current directory contains this file, use [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) to render the style;
-- Support "pagination", there is no limit of 200 items in a directory!
-
-### 📁 File online preview
-
-- Render the file icon according to the file type, the icon uses [Font Awesome icons](https://fontawesome.com/);
-- Support preview:
-   - Plain text: `.txt`.
-   - Markdown format text: `.md`, `.mdown`, `.markdown`.
-   - Images (Support Medium-style image scaling): `.png`, `.jpg`, and `.gif`.
-   - Code highlighting: `.js`, `.py`, `.c`, `.json`...
-   - PDF (support lazy loading, loading progress, Chrome built-in PDF reader): `.pdf`.
-   - Music: `.mp3`, `.aac`, `.wav`, `.oga`.
-   - Video: `.mp4`, `.flv`, `.webm`, `.m3u8`. 
-
-### 🔒 Private folders
-
-![Private folders](assets/private-folder.png)
-
-We can lock a specific folder (directory) and require authentication to access it. We can write the directories we want to make private folders into the `ENABLE_PATHS` list in the `src/auth/config.js` file. We can also customize the user name `NAME` and password used for authentication, where the authentication password is saved in the `AUTH_PASSWORD` environment variable, which needs to be set using wrangler:
-
-```bash
-wrangler secret put AUTH_PASSWORD
-# Enter your own authentication password here
-```
-
 ## Deployment Guide
 
 ### Generate OneDrive API Token
@@ -156,7 +116,7 @@ Modify [`src/config/default.js`](src/config/default.js):
    - Modify `type` under `driveType` to `1`;
    - and modify `hostName` and `sitePath` according to your SharePoint service.
 
-Use `wrangler` to add Cloudflare Workers environment variables (see [🔒 private folders](#-private-folders) for authentication passwords):
+Use `wrangler` to add Cloudflare Workers environment variables (We can lock a specific folder (directory) and require authentication to access it. We can write the directories we want to make private folders into the `ENABLE_PATHS` list in the `src/auth/config.js` file. We can also customize the user name `NAME` and password used for authentication, where the authentication password is saved in the `AUTH_PASSWORD` environment variable, which needs to be set using wrangler):
 
 ```sh
 # Add our refresh_token and client_secret
