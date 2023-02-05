@@ -8,12 +8,6 @@
 
 <h5>This project uses CloudFlare Workers to help you deploy and share your OneDrive files for free. This project is largely derived from: <a href="https://github.com/heymind/OneDrive-Index-Cloudflare-Worker">onedrive-index-cloudflare-worker</a>, tribute. </h5>
 
-## Demo
-
-Online demo: [Spencer's OneDrive Index](https://storage.spencerwoo.com/).
-
-![Screenshot Demo](assets/screenshot.png)
-
 ## Function
 
 ### 🚀 Feature List
@@ -35,13 +29,13 @@ Online demo: [Spencer's OneDrive Index](https://storage.spencerwoo.com/).
 
 - Render the file icon according to the file type, the icon uses [Font Awesome icons](https://fontawesome.com/);
 - Support preview:
-   - Plain text: `.txt`. [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Previews/iso_8859-1.txt).
-   - Markdown format text: `.md`, `.mdown`, `.markdown`. [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Previews/i_m_a_md.md).
-   - Images (Support Medium-style image scaling): `.png`, `.jpg`, and `.gif`. [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Previews/).
-   - Code highlighting: `.js`, `.py`, `.c`, `.json`... [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Code/pathUtil.js).
-   - PDF (support lazy loading, loading progress, Chrome built-in PDF reader): `.pdf`. [_DEMO_](<https://storage.spencerwoo.com/%F0%9F%A5%91%20Course%20PPT%20for%20CS%20(BIT)/2018%20-%20%E5%A4%A7%E4%BA%8C%E4%B8%8B%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/1%20FoundationofCG-Anonymous.pdf>).
-   - Music: `.mp3`, `.aac`, `.wav`, `.oga`. [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Multimedia/Elysian%20Fields%20-%20Climbing%20My%20Dark%20Hair.mp3).
-   - Video: `.mp4`, `.flv`, `.webm`, `.m3u8`. [_DEMO_](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/Multimedia/%E8%BD%A6%E5%BA%93%E5%A5%B3%E7%8E%8B%20%E9%AB%98%E8%B7%9F%E8%B9%A6%E8%BF%AA%20%E4%B9%98%E9%A3%8E%E7%A0%B4%E6%B5%AA%E7%9A%84%E5%A7%90%E5%A7%90%E4%B8%BB%E9%A2%98%E6%9B%B2%E3%80%90%E9%86%8B%E9%86%8B%E3%80%91.mp4).
+   - Plain text: `.txt`.
+   - Markdown format text: `.md`, `.mdown`, `.markdown`.
+   - Images (Support Medium-style image scaling): `.png`, `.jpg`, and `.gif`.
+   - Code highlighting: `.js`, `.py`, `.c`, `.json`...
+   - PDF (support lazy loading, loading progress, Chrome built-in PDF reader): `.pdf`.
+   - Music: `.mp3`, `.aac`, `.wav`, `.oga`.
+   - Video: `.mp4`, `.flv`, `.webm`, `.m3u8`. 
 
 ### 🔒 Private folders
 
@@ -70,13 +64,9 @@ https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/nyancat.gif?ra
 
 ![](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/nyancat.gif?raw)
 
-### Other functions
-
-Please refer to the "🔥 New Features V1.1" section of the original project: [onedrive-index-cloudflare-worker](https://github.com/heymind/OneDrive-Index-Cloudflare-Worker#-%E6%96%B0%E7%89%B9%E6%80%A7-v11), **But I do not guarantee that all functions are available, because the changes in this project are very large. **
-
 ## Deployment Guide
 
-_Warning for the stinky and long Chinese version of the deployment guide! _
+_Warning for the stinky and long Chinese (translated) version of the deployment guide! _
 
 ### Generate OneDrive API Token
 
@@ -136,7 +126,7 @@ _It is strongly recommended that you use Node version manager such as [n](https:
 
 ```sh
 # Install CloudFlare Workers official compilation and deployment tool
-npm i @cloudflare/wrangler -g
+npm install -g wrangler
 
 # install dependencies using npm
 npm install
@@ -148,13 +138,12 @@ wrangler login
 wrangler whoami
 ```
 
-Open <https://dash.cloudflare.com/login>, log in to CloudFlare, choose your own domain name, ** and scroll down a bit, we can see our `account_id` and `zone_id` on the right column. ** At the same time, create a **DRAFT** worker at `Workers` -> `Manage Workers` -> `Create a Worker`.
+Open <https://dash.cloudflare.com/login>, log in to CloudFlare, create a worker at `Workers` -> `Manage Workers` -> `Create a Worker`, and then look on the right side for your Accound ID.
 
 Modify our [`wrangler.toml`](wrangler.toml):
 
-- `name`: is the name of the draft worker we just created, and our Worker will be published under this domain name by default: `<name>.<worker_subdomain>.workers.dev`;
+- `name`: is the name of the worker we just created, and our Worker will be published under this domain name by default: `<name>.<worker_subdomain>.workers.dev`;
 - `account_id`: our Cloudflare Account ID;
-- `zone_id`: Our Cloudflare Zone ID.
 
 Create a Cloudflare Workers KV bucket called `BUCKET`:
 
@@ -185,7 +174,7 @@ Modify [`src/config/default.js`](src/config/default.js):
    - Modify `type` under `driveType` to `1`;
    - and modify `hostName` and `sitePath` according to your SharePoint service.
 
-Use `wrangler` to add Cloudflare Workers environment variables (see [🔒 private folders](#-private folders) for authentication passwords):
+Use `wrangler` to add Cloudflare Workers environment variables (see [🔒 private folders](#private folders) for authentication passwords):
 
 ```sh
 # Add our refresh_token and client_secret
@@ -199,14 +188,15 @@ wrangler secret put AUTH_PASSWORD
 # ... enter the authentication password we set here
 ```
 
-### Add Required Packages
+### Compile and deploy
+
+Add Required Packages
+
 ```
 npm install font-awesome-filetypes marked
 ```
 
-### Compile and deploy
-
-We can preview the deployment using `wrangler`:
+We can then preview the deployment using `wrangler`:
 
 ```sh
 wrangler dev
