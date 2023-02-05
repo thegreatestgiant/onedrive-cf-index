@@ -1,6 +1,6 @@
 <div align="center">
    <image src="assets/onedrive-cf-index.png" alt="onedrive-cf-index" width="150px" />
-   <h3><a href="https://storage.spencerwoo.com">onedrive-cf-index</a></h3>
+   <h3>onedrive-cf-index</h3>
    <em>OneDrive indexing powered by CloudFlare Workers</em>
 </div>
 
@@ -48,29 +48,11 @@ wrangler secret put AUTH_PASSWORD
 # Enter your own authentication password here
 ```
 
-Please refer to the [next paragraphs](#preparation) for details on how to use wrangler.
-
-### ⬇️ Proxy to download files / file direct link access
-
-- [Optional] Proxied download: `?proxied` - Download files via CloudFlare Workers if (1) `proxyDownload` in `config/default.js` is `true`, and (2) using Parameter `?proxied` request file;
-- [Optional] Raw file download (direct file access): `?raw` - return the file direct link instead of the preview interface;
-- Both parameters can be used together, i.e. `?proxied&raw` and `?raw&proxied` are both valid.
-
-Yes, this means that you can use this project to build a "picture bed", or to build a static file deployment service, such as the following picture link:
-
-```
-https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/nyancat.gif?raw
-```
-
-![](https://storage.spencerwoo.com/%F0%9F%A5%9F%20Some%20test%20files/nyancat.gif?raw)
-
 ## Deployment Guide
-
-_Warning for the stinky and long Chinese (translated) version of the deployment guide! _
 
 ### Generate OneDrive API Token
 
-1. Visit this URL to create a new Blade app: [Microsoft Azure App registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) (normal version of OneDrive) or [Microsoft Azure.cn App registrations]( https://portal.azure.cn/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) (OneDrive 21Vianet version) :
+1. Visit this URL to create a new Blade app: [Microsoft Azure App registrations (normal version of OneDrive)](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) or [Microsoft Azure.cn App registrations (OneDrive 21Vianet version)]( https://portal.azure.cn/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) :
 
     1. Log in with your Microsoft account, select `New registration`;
     2. Set the name of the Blade app at `Name`, such as `my-onedrive-cf-index`;
