@@ -116,7 +116,7 @@ Modify [`src/config/default.js`](src/config/default.js):
    - Modify `type` under `driveType` to `1`;
    - and modify `hostName` and `sitePath` according to your SharePoint service.
 
-Use `wrangler` to add Cloudflare Workers environment variables (We can lock a specific folder (directory) and require authentication to access it. We can write the directories we want to make private folders into the `ENABLE_PATHS` list in the `src/auth/config.js` file. We can also customize the user name `NAME` and password used for authentication, where the authentication password is saved in the `AUTH_PASSWORD` environment variable, which needs to be set using wrangler):
+Use `wrangler` to add Cloudflare Workers environment variables (We can lock a specific folder (directory) and require authentication to access it. We can write the directories we want to make private folders into the `ENABLE_PATHS` list in the [`src/auth/config.js`](src/auth/config.js) file. We can also customize the user name `NAME` and password used for authentication, where the authentication password is saved in the `AUTH_PASSWORD` environment variable, which needs to be set using wrangler):
 
 ```sh
 # Add our refresh_token and client_secret
