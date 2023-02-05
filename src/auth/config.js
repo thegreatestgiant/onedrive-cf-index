@@ -4,11 +4,11 @@
  *
  * AUTH_ENABLED   `false` to disable it
  * NAME           user name
- * ENABLE_PATHS   enable protection on specific folders/files
+ * ENABLE_PATHS   enable protection on specific /folders/files
  */
 export const AUTH_ENABLED = true
 export const NAME = 'guest'
-export const ENABLE_PATHS = ['onedrive-cf']
+export const ENABLE_PATHS = ['']
 
 /**
  * RegExp for basic auth credentials
