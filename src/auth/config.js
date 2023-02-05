@@ -8,7 +8,7 @@
  */
 export const AUTH_ENABLED = true
 export const NAME = 'guest'
-export const ENABLE_PATHS = ['/test']
+export const ENABLE_PATHS = ['onedrive-cf']
 
 /**
  * RegExp for basic auth credentials
